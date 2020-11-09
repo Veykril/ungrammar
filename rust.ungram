@@ -624,4 +624,4 @@ MacroPat =
   MacroCall
 
 InlineConstPat =
-  'const' 
+  'const' BlockExpr

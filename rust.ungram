@@ -363,7 +363,7 @@ TryExpr =
   Attr* Expr '?'
 
 EffectExpr =
-  Attr* Label? ('try' | 'unsafe' | 'async') BlockExpr
+  Attr* Label? ('try' | 'unsafe' | 'async' | 'const') BlockExpr
 
 PrefixExpr =
   Attr* op:('-' | '!' | '*') Expr
@@ -557,6 +557,7 @@ Pat =
 | RestPat
 | LiteralPat
 | MacroPat
+| InlineConstPat
 | OrPat
 | ParenPat
 | PathPat
@@ -621,3 +622,6 @@ RestPat =
 
 MacroPat =
   MacroCall
+
+InlineConstPat =
+  'const' 

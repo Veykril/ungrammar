@@ -254,7 +254,7 @@ AssocItem =
 Impl =
   Attr* Visibility?
   'default'? 'unsafe'?
-  'impl' GenericParamList? ('const'? '!'? trait:Type 'for')? self_ty:Type WhereClause?
+  'impl' GenericParamList? ('const'? '!'? trait:PathType 'for')? self_ty:Type WhereClause?
   AssocItemList
 
 ExternBlock =
@@ -566,7 +566,7 @@ TypeBoundList =
 
 TypeBound =
   Lifetime
-| '?'? Type
+| '?'? PathType
 
 //************************//
 //        Patterns        //
